@@ -25,4 +25,8 @@ Route::group(['prefix' => 'manage' , 'middleware' => 'auth'] , function(){
 	Route::get('/' , function(){
 		return view('manage.index');
 	});
+
+	Route::group(['prefix' => 'user'],function(){
+		Route::get('/' , ['uses' => 'Manage\UserController@index']);
+	});
 });

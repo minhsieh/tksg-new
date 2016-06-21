@@ -23,4 +23,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function pages()
+    {
+        return $this->belongsToMany('App\Page','user_page','user_id','page_id');
+    }
 }
