@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('home.index');
 });
+
+Route::group(['prefix' => 'login'] , function(){
+	Route::get('/', ['uses' => 'LoginController@index']);
+	Route::post('/', ['uses' => 'LoginController@login']);
+});
+Route::get('/logout' , ['uses' => 'LoginController@logout']);
+
+Route::group(['prefix' => 'manage' , 'middleware' => 'auth'] , function(){
+	
+});
