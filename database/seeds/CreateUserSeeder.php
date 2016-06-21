@@ -13,6 +13,7 @@ class CreateUserSeeder extends Seeder
     {
         App\User::create([
         	'name' => '主管理者',
+        	'username' => 'admin',
         	'email' => 'admin@admin.com',
         	'job_title' => '系統管理者',
         	'phone' => '0963-383-891',

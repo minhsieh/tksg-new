@@ -22,5 +22,7 @@ Route::group(['prefix' => 'login'] , function(){
 Route::get('/logout' , ['uses' => 'LoginController@logout']);
 
 Route::group(['prefix' => 'manage' , 'middleware' => 'auth'] , function(){
-	
+	Route::get('/' , function(){
+		return view('manage.index');
+	});
 });
