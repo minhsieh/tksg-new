@@ -26,6 +26,6 @@ class User extends Authenticatable
 
     public function pages()
     {
-        return $this->belongsToMany('App\Page','user_page','user_id','page_id');
+        return $this->belongsToMany('App\Page','user_pages','user_id','page_id');
     }
 }

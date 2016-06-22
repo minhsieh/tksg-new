@@ -18,6 +18,6 @@ class CreateUserSeeder extends Seeder
         	'job_title' => '系統管理者',
         	'phone' => '0963-383-891',
         	'password' => bcrypt('123456')
-        	]);
+        ]);
     }
 }

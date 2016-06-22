@@ -59,7 +59,7 @@
                                 <?php $pages = $pagePresenter->pages()?>
                                 @foreach($pages as $one)
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{{action('Manage\PageController@index',['id'=>$one->id])}}" class="nav-link ">
                                         <span class="title">{{$one->name}}</span>
                                     </a>
                                 </li>

@@ -10,4 +10,9 @@ class Page extends Model
 	{
 		return $this->belongsToMany('App\User','user_pages','page_id','user_id');
 	}
+
+	public function contents()
+	{
+		return $this->hasMany('App\PageContent','page_id');
+	}
 }

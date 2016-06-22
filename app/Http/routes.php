@@ -29,4 +29,13 @@ Route::group(['prefix' => 'manage' , 'middleware' => 'auth'] , function(){
 	Route::group(['prefix' => 'user'],function(){
 		Route::get('/' , ['uses' => 'Manage\UserController@index']);
 	});
+
+	Route::group(['prefix' => 'page'],function(){
+		Route::get('edit/{pc_id}' , ['uses' => 'Manage\PageController@edit']);
+		Route::post('update' , ['uses' => 'Manage\PageController@update']);
+		Route::post('store',['uses' => 'Manage\PageController@store']);
+		Route::get('create/{id}',['uses' => 'Manage\PageController@create']);
+
+		Route::get('/{id}' , ['uses' => 'Manage\PageController@index']);
+	});
 });
