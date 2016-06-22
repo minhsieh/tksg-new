@@ -33,6 +33,7 @@
             <div class="table-toolbar">
                 <div class="row">
                     <div class="col-md-3">
+                        <a href="{{action('Manage\PageController@create',['id'=>$page->id])}}" class="btn green">
                         新增項目 <i class="fa fa-plus"></i>
                         </a>
                     </div>
@@ -68,6 +69,7 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
+                                <a class="btn_news_edit" href="{{action('Manage\PageController@edit',['id' => $one->id])}}">
                                 <i class="fa fa-pencil"></i>
                                 編輯 </a>
                             </li>
